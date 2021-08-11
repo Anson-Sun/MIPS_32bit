@@ -1,0 +1,116 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Thu Aug  5 17:55:22 2021
+| Host         : LAPTOP-0MB8ALMH running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file MIPS_SZJ_TOP_control_sets_placed.rpt
+| Design       : MIPS_SZJ_TOP
+| Device       : xc7a200t
+-----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    38 |
+|    Minimum number of control sets                        |    38 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    30 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    38 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    36 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             250 |          106 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |            1114 |          464 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              62 |           18 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------------+----------------------------------------+----------------------------------+------------------+----------------+
+|                Clock Signal                |              Enable Signal             |         Set/Reset Signal         | Slice Load Count | Bel Load Count |
++--------------------------------------------+----------------------------------------+----------------------------------+------------------+----------------+
+|  m_cpu_mips32/u_control/RegDst_reg_i_2_n_1 |                                        |                                  |                1 |              1 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_PC/stage_IF_PCwrite     | m_cpu_mips32/stage_EXE_Rd        |                1 |              5 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_PC/stage_IF_PCwrite     | m_cpu_mips32/u_PC/Flush_Pipeline |                8 |             25 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[25][31]_i_1_n_1 |                                  |                9 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[27][31]_i_1_n_1 |                                  |               12 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[21][31]_i_1_n_1 |                                  |               12 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[2][31]_i_1_n_1  |                                  |               10 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[18][31]_i_1_n_1 |                                  |               10 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[22][31]_i_1_n_1 |                                  |               15 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[31][31]_i_1_n_1 |                                  |               18 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[19][31]_i_1_n_1 |                                  |               11 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[29][31]_i_1_n_1 |                                  |               13 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[5][31]_i_1_n_1  |                                  |               12 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[6][31]_i_1_n_1  |                                  |               12 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[7][31]_i_1_n_1  |                                  |               15 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[30][31]_i_1_n_1 |                                  |               15 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[16][31]_i_1_n_1 |                                  |               18 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[8][31]_i_1_n_1  |                                  |               14 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[24][31]_i_1_n_1 |                                  |               19 |             32 |
+|  n_0_1499_BUFG                             |                                        |                                  |               24 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[28][31]_i_1_n_1 |                                  |               11 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[1][31]_i_1_n_1  |                                  |               18 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[15][31]_i_1_n_1 |                                  |               15 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[20][31]_i_1_n_1 |                                  |               14 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[23][31]_i_1_n_1 |                                  |               19 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[14][31]_i_1_n_1 |                                  |               13 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[26][31]_i_1_n_1 |                                  |               12 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[17][31]_i_1_n_1 |                                  |               11 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[4][31]_i_1_n_1  |                                  |               13 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[11][31]_i_1_n_1 |                                  |               14 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[10][31]_i_1_n_1 |                                  |               19 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[9][31]_i_1_n_1  |                                  |               15 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[12][31]_i_1_n_1 |                                  |               12 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[13][31]_i_1_n_1 |                                  |                9 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_PC/stage_IF_PCwrite     | m_cpu_mips32/u_PC/p_0_in         |                9 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_gpr/GPR[3][31]_i_1_n_1  |                                  |               11 |             32 |
+|  CLK100MHZ_IBUF_BUFG                       | m_cpu_mips32/u_PC/stage_IF_PCwrite     |                                  |               43 |            122 |
+|  CLK100MHZ_IBUF_BUFG                       |                                        |                                  |               81 |            217 |
++--------------------------------------------+----------------------------------------+----------------------------------+------------------+----------------+
+
+

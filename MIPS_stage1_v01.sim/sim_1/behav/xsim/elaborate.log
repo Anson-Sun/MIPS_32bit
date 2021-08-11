@@ -1,0 +1,36 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado2019.2/main/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 73e51a62586e431aa4eadec5fcc4fdfa --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_MIPS_CPU_ORI_behav xil_defaultlib.tb_MIPS_CPU_ORI xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-5021] port 'reset' is not connected on this instance [D:/Program_Files/MIPS CPU/race/Vivado2019/MIPS_v00/MIPS_stage1_v01.srcs/sources_1/new/MIPS_SZJ_TOP.v:35]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.slow_clock_1HZ
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=12.0,...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.PC_32
+Compiling module xil_defaultlib.INS_MEM
+Compiling module xil_defaultlib.MUX_5_2
+Compiling module xil_defaultlib.GPR
+Compiling module xil_defaultlib.control
+Compiling module xil_defaultlib.MUX_1_2
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.CP0
+Compiling module xil_defaultlib.DATA_MEM
+Compiling module xil_defaultlib.MUX_32_2
+Compiling module xil_defaultlib.ForwardingUnit_4
+Compiling module xil_defaultlib.MUX_32_4
+Compiling module xil_defaultlib.HarzardDetectionUnit
+Compiling module xil_defaultlib.MIPS_CPU_datapath
+Compiling module xil_defaultlib.seg_play_4
+Compiling module xil_defaultlib.MIPS_SZJ_TOP
+Compiling module xil_defaultlib.tb_MIPS_CPU_ORI
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_MIPS_CPU_ORI_behav
